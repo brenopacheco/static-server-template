@@ -1,5 +1,5 @@
 {
-    "name": "static-server-template",
+    "name": "static-server-template-tailwind",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -7,6 +7,7 @@
         "serve": "http-server ./dist -p ${PORT:-8080}",
         "watch": "livereload ./dist -d -e html,css,js",
         "start": "npm run watch & npm run serve",
+        "build": "tailwindcss build tailwind.css -o dist/styles.css",
         "deploy": "echo \"specify deploy cycle\""
     },
     "keywords": [],
@@ -16,6 +17,7 @@
         "http-server": "^0.12.3"
     },
     "devDependencies": {
-        "livereload": "^0.9.1"
+        "livereload": "^0.9.1",
+        "tailwindcss-cli": "^0.1.2"
     }
 }
