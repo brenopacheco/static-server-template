@@ -1,0 +1,19 @@
+{
+    "name": "static-server-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "http-server ./dist -p ${PORT:-8080}",
+        "watch": "livereload ./dist -d -e html,css,js",
+        "start": "npm run watch & npm run serve",
+        "deploy": "echo \"specify deploy cycle\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "http-server": "^0.12.3",
+        "livereload": "^0.9.1"
+    }
+}
